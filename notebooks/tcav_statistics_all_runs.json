@@ -1,0 +1,2652 @@
+[
+    {
+        "run_id": 0,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.21
+            },
+            "1": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.07
+            },
+            "2": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.46
+            },
+            "3": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.08
+            },
+            "4": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.1
+            },
+            "5": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.17
+            },
+            "6": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.14
+            },
+            "7": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.41
+            },
+            "8": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.91
+            },
+            "9": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.89
+            },
+            "11": {
+                "cav_accuracy": 0.8125,
+                "tcav_score": 0.8
+            }
+        }
+    },
+    {
+        "run_id": 1,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.48
+            },
+            "1": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.29
+            },
+            "2": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.7
+            },
+            "3": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.69
+            },
+            "4": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.76
+            },
+            "5": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.8
+            },
+            "6": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.75
+            },
+            "7": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.75
+            },
+            "8": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.96
+            },
+            "11": {
+                "cav_accuracy": 0.7875,
+                "tcav_score": 0.86
+            }
+        }
+    },
+    {
+        "run_id": 2,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.19
+            },
+            "1": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.16
+            },
+            "2": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.94
+            },
+            "3": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.67
+            },
+            "4": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.77
+            },
+            "5": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.81
+            },
+            "6": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.8
+            },
+            "7": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.82
+            },
+            "8": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.92
+            },
+            "10": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.85
+            },
+            "11": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.82
+            }
+        }
+    },
+    {
+        "run_id": 3,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.29
+            },
+            "1": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.28
+            },
+            "2": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.93
+            },
+            "3": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.73
+            },
+            "4": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.88
+            },
+            "5": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.86
+            },
+            "6": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.85
+            },
+            "7": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.93
+            },
+            "8": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.93
+            },
+            "10": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.91
+            },
+            "11": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.82
+            }
+        }
+    },
+    {
+        "run_id": 4,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.15
+            },
+            "1": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.06
+            },
+            "2": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.03
+            },
+            "3": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.03
+            },
+            "4": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.48
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.34
+            },
+            "6": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.17
+            },
+            "7": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.37
+            },
+            "8": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.9
+            },
+            "11": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.88
+            }
+        }
+    },
+    {
+        "run_id": 5,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.21
+            },
+            "1": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.67
+            },
+            "2": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.95
+            },
+            "3": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.92
+            },
+            "4": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.95
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.93
+            },
+            "6": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.96
+            },
+            "7": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.94
+            },
+            "8": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.97
+            },
+            "9": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.7625,
+                "tcav_score": 0.94
+            },
+            "11": {
+                "cav_accuracy": 0.8125,
+                "tcav_score": 0.91
+            }
+        }
+    },
+    {
+        "run_id": 6,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.23
+            },
+            "1": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.31
+            },
+            "2": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.9
+            },
+            "3": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.82
+            },
+            "4": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.88
+            },
+            "5": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.9
+            },
+            "6": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.89
+            },
+            "7": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.86
+            },
+            "8": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.8875,
+                "tcav_score": 0.94
+            },
+            "11": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.85
+            }
+        }
+    },
+    {
+        "run_id": 7,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.14
+            },
+            "1": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.19
+            },
+            "2": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.95
+            },
+            "3": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.94
+            },
+            "4": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.96
+            },
+            "5": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.96
+            },
+            "6": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.95
+            },
+            "7": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.96
+            },
+            "8": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.94
+            },
+            "10": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.87
+            },
+            "11": {
+                "cav_accuracy": 0.8125,
+                "tcav_score": 0.85
+            }
+        }
+    },
+    {
+        "run_id": 8,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.29
+            },
+            "1": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.72
+            },
+            "2": {
+                "cav_accuracy": 0.675,
+                "tcav_score": 0.92
+            },
+            "3": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.89
+            },
+            "4": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.89
+            },
+            "5": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.88
+            },
+            "6": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.88
+            },
+            "7": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.87
+            },
+            "8": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.84
+            },
+            "9": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.94
+            },
+            "10": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.84
+            },
+            "11": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.9
+            }
+        }
+    },
+    {
+        "run_id": 9,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.1
+            },
+            "1": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.33
+            },
+            "2": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.82
+            },
+            "3": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.8
+            },
+            "4": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.89
+            },
+            "5": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.84
+            },
+            "6": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.82
+            },
+            "7": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.8
+            },
+            "8": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.8125,
+                "tcav_score": 0.74
+            },
+            "11": {
+                "cav_accuracy": 0.7625,
+                "tcav_score": 0.82
+            }
+        }
+    },
+    {
+        "run_id": 10,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.28
+            },
+            "1": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.08
+            },
+            "2": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.08
+            },
+            "3": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.08
+            },
+            "4": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.14
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.13
+            },
+            "6": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.11
+            },
+            "7": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.14
+            },
+            "8": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.76
+            },
+            "9": {
+                "cav_accuracy": 0.7125,
+                "tcav_score": 0.88
+            },
+            "10": {
+                "cav_accuracy": 0.8125,
+                "tcav_score": 0.66
+            },
+            "11": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.9
+            }
+        }
+    },
+    {
+        "run_id": 11,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.31
+            },
+            "1": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.75
+            },
+            "2": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.91
+            },
+            "3": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.88
+            },
+            "4": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.88
+            },
+            "5": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.85
+            },
+            "6": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.82
+            },
+            "7": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.8
+            },
+            "8": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.85
+            },
+            "9": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.77
+            },
+            "10": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.63
+            },
+            "11": {
+                "cav_accuracy": 0.7625,
+                "tcav_score": 0.93
+            }
+        }
+    },
+    {
+        "run_id": 12,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.26
+            },
+            "1": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.41
+            },
+            "2": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.94
+            },
+            "3": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.92
+            },
+            "4": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.96
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.94
+            },
+            "6": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.91
+            },
+            "7": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.94
+            },
+            "8": {
+                "cav_accuracy": 0.675,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.82
+            },
+            "11": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.85
+            }
+        }
+    },
+    {
+        "run_id": 13,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.11
+            },
+            "1": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.17
+            },
+            "2": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.77
+            },
+            "3": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.78
+            },
+            "4": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.77
+            },
+            "5": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.82
+            },
+            "6": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.85
+            },
+            "7": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.88
+            },
+            "8": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.675,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.875,
+                "tcav_score": 0.95
+            },
+            "11": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.82
+            }
+        }
+    },
+    {
+        "run_id": 14,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.59
+            },
+            "1": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.11
+            },
+            "2": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.48
+            },
+            "3": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.36
+            },
+            "4": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.58
+            },
+            "5": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.55
+            },
+            "6": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.45
+            },
+            "7": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.67
+            },
+            "8": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.91
+            },
+            "11": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.88
+            }
+        }
+    },
+    {
+        "run_id": 15,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.14
+            },
+            "1": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.33
+            },
+            "2": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.84
+            },
+            "3": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.84
+            },
+            "4": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.88
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.91
+            },
+            "6": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.9
+            },
+            "7": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.92
+            },
+            "8": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.59
+            },
+            "11": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.96
+            }
+        }
+    },
+    {
+        "run_id": 16,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.44
+            },
+            "1": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.2
+            },
+            "2": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.13
+            },
+            "3": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.24
+            },
+            "4": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.36
+            },
+            "5": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.63
+            },
+            "6": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.53
+            },
+            "7": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.39
+            },
+            "8": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.94
+            },
+            "10": {
+                "cav_accuracy": 0.7125,
+                "tcav_score": 0.64
+            },
+            "11": {
+                "cav_accuracy": 0.75,
+                "tcav_score": 0.76
+            }
+        }
+    },
+    {
+        "run_id": 17,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.21
+            },
+            "1": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.14
+            },
+            "2": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.65
+            },
+            "3": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.82
+            },
+            "4": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.69
+            },
+            "5": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.64
+            },
+            "6": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.65
+            },
+            "7": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.66
+            },
+            "8": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.94
+            },
+            "11": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.85
+            }
+        }
+    },
+    {
+        "run_id": 18,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.27
+            },
+            "1": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.27
+            },
+            "2": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.9
+            },
+            "3": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.9
+            },
+            "4": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.95
+            },
+            "5": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.95
+            },
+            "6": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.95
+            },
+            "7": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.95
+            },
+            "8": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.79
+            },
+            "11": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.96
+            }
+        }
+    },
+    {
+        "run_id": 19,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.23
+            },
+            "1": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.18
+            },
+            "2": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.88
+            },
+            "3": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.86
+            },
+            "4": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.93
+            },
+            "5": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.91
+            },
+            "6": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.89
+            },
+            "7": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.89
+            },
+            "8": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.71
+            },
+            "11": {
+                "cav_accuracy": 0.7875,
+                "tcav_score": 0.93
+            }
+        }
+    },
+    {
+        "run_id": 20,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.27
+            },
+            "1": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.41
+            },
+            "2": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.97
+            },
+            "3": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.96
+            },
+            "4": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.98
+            },
+            "5": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.92
+            },
+            "6": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.92
+            },
+            "7": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.94
+            },
+            "8": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.7625,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.8625,
+                "tcav_score": 0.96
+            },
+            "11": {
+                "cav_accuracy": 0.8625,
+                "tcav_score": 0.93
+            }
+        }
+    },
+    {
+        "run_id": 21,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.19
+            },
+            "1": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.12
+            },
+            "2": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.71
+            },
+            "3": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.76
+            },
+            "4": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.77
+            },
+            "5": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.81
+            },
+            "6": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.84
+            },
+            "7": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.84
+            },
+            "8": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.92
+            },
+            "9": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.92
+            },
+            "10": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.67
+            },
+            "11": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.9
+            }
+        }
+    },
+    {
+        "run_id": 22,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.15
+            },
+            "1": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.65
+            },
+            "2": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.99
+            },
+            "3": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.99
+            },
+            "4": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.98
+            },
+            "5": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.98
+            },
+            "6": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 1.0
+            },
+            "7": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.99
+            },
+            "8": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.7625,
+                "tcav_score": 0.92
+            },
+            "11": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.93
+            }
+        }
+    },
+    {
+        "run_id": 23,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.48
+            },
+            "1": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.05
+            },
+            "2": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.35
+            },
+            "3": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.67
+            },
+            "4": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.73
+            },
+            "5": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.75
+            },
+            "6": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.71
+            },
+            "7": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.79
+            },
+            "8": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.7125,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.33
+            },
+            "11": {
+                "cav_accuracy": 0.8125,
+                "tcav_score": 0.74
+            }
+        }
+    },
+    {
+        "run_id": 24,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.29
+            },
+            "1": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.36
+            },
+            "2": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.95
+            },
+            "3": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.93
+            },
+            "4": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.96
+            },
+            "5": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.95
+            },
+            "6": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.9
+            },
+            "7": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.95
+            },
+            "8": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.725,
+                "tcav_score": 0.94
+            },
+            "10": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.87
+            },
+            "11": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.95
+            }
+        }
+    },
+    {
+        "run_id": 25,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.23
+            },
+            "1": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.39
+            },
+            "2": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.95
+            },
+            "3": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.94
+            },
+            "4": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.95
+            },
+            "5": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.94
+            },
+            "6": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.95
+            },
+            "7": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.94
+            },
+            "8": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.7625,
+                "tcav_score": 0.94
+            },
+            "10": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.93
+            },
+            "11": {
+                "cav_accuracy": 0.8625,
+                "tcav_score": 0.84
+            }
+        }
+    },
+    {
+        "run_id": 26,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.4875,
+                "tcav_score": 0.23
+            },
+            "1": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.56
+            },
+            "2": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.91
+            },
+            "3": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.92
+            },
+            "4": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.9
+            },
+            "5": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.88
+            },
+            "6": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.88
+            },
+            "7": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.85
+            },
+            "8": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.85
+            },
+            "9": {
+                "cav_accuracy": 0.75,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.9
+            },
+            "11": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.95
+            }
+        }
+    },
+    {
+        "run_id": 27,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.19
+            },
+            "1": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.12
+            },
+            "2": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.84
+            },
+            "3": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.86
+            },
+            "4": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.88
+            },
+            "5": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.88
+            },
+            "6": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.88
+            },
+            "7": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.87
+            },
+            "8": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.92
+            },
+            "9": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.94
+            },
+            "10": {
+                "cav_accuracy": 0.875,
+                "tcav_score": 0.9
+            },
+            "11": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.8
+            }
+        }
+    },
+    {
+        "run_id": 28,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.32
+            },
+            "1": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.11
+            },
+            "2": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.74
+            },
+            "3": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.75
+            },
+            "4": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.8
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.82
+            },
+            "6": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.76
+            },
+            "7": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.79
+            },
+            "8": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.92
+            },
+            "11": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.88
+            }
+        }
+    },
+    {
+        "run_id": 29,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.37
+            },
+            "1": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.15
+            },
+            "2": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.38
+            },
+            "3": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.11
+            },
+            "4": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.12
+            },
+            "5": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.35
+            },
+            "6": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.53
+            },
+            "7": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.53
+            },
+            "8": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.94
+            },
+            "10": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.96
+            },
+            "11": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.89
+            }
+        }
+    },
+    {
+        "run_id": 30,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.15
+            },
+            "1": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.18
+            },
+            "2": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.8
+            },
+            "3": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.76
+            },
+            "4": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.73
+            },
+            "5": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.72
+            },
+            "6": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.7
+            },
+            "7": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.76
+            },
+            "8": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.89
+            },
+            "9": {
+                "cav_accuracy": 0.8125,
+                "tcav_score": 0.87
+            },
+            "10": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.92
+            },
+            "11": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.89
+            }
+        }
+    },
+    {
+        "run_id": 31,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.22
+            },
+            "1": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.38
+            },
+            "2": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.9
+            },
+            "3": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.85
+            },
+            "4": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.85
+            },
+            "5": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.83
+            },
+            "6": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.82
+            },
+            "7": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.77
+            },
+            "8": {
+                "cav_accuracy": 0.725,
+                "tcav_score": 0.88
+            },
+            "9": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.89
+            },
+            "11": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.93
+            }
+        }
+    },
+    {
+        "run_id": 32,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.26
+            },
+            "1": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.06
+            },
+            "2": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.39
+            },
+            "3": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.75
+            },
+            "4": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.76
+            },
+            "5": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.69
+            },
+            "6": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.67
+            },
+            "7": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.84
+            },
+            "8": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.83
+            },
+            "11": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.9
+            }
+        }
+    },
+    {
+        "run_id": 33,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.41
+            },
+            "1": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.07
+            },
+            "2": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.11
+            },
+            "3": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.05
+            },
+            "4": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.08
+            },
+            "5": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.08
+            },
+            "6": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.05
+            },
+            "7": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.14
+            },
+            "8": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.79
+            },
+            "9": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.9
+            },
+            "10": {
+                "cav_accuracy": 0.7625,
+                "tcav_score": 0.75
+            },
+            "11": {
+                "cav_accuracy": 0.7125,
+                "tcav_score": 0.92
+            }
+        }
+    },
+    {
+        "run_id": 34,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.18
+            },
+            "1": {
+                "cav_accuracy": 0.675,
+                "tcav_score": 0.23
+            },
+            "2": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.81
+            },
+            "3": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.87
+            },
+            "4": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.82
+            },
+            "5": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.84
+            },
+            "6": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.82
+            },
+            "7": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.8
+            },
+            "8": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.7625,
+                "tcav_score": 0.96
+            },
+            "11": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.87
+            }
+        }
+    },
+    {
+        "run_id": 35,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.17
+            },
+            "1": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.28
+            },
+            "2": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.92
+            },
+            "3": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.95
+            },
+            "4": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.95
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.95
+            },
+            "6": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.96
+            },
+            "7": {
+                "cav_accuracy": 0.4875,
+                "tcav_score": 0.96
+            },
+            "8": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.94
+            },
+            "11": {
+                "cav_accuracy": 0.7875,
+                "tcav_score": 0.83
+            }
+        }
+    },
+    {
+        "run_id": 36,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.4875,
+                "tcav_score": 0.26
+            },
+            "1": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.28
+            },
+            "2": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.87
+            },
+            "3": {
+                "cav_accuracy": 0.725,
+                "tcav_score": 0.82
+            },
+            "4": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.81
+            },
+            "5": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.83
+            },
+            "6": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.81
+            },
+            "7": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.79
+            },
+            "8": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.875,
+                "tcav_score": 0.99
+            },
+            "11": {
+                "cav_accuracy": 0.7875,
+                "tcav_score": 0.94
+            }
+        }
+    },
+    {
+        "run_id": 37,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.2
+            },
+            "1": {
+                "cav_accuracy": 0.675,
+                "tcav_score": 0.29
+            },
+            "2": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.91
+            },
+            "3": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.85
+            },
+            "4": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.87
+            },
+            "5": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.88
+            },
+            "6": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.86
+            },
+            "7": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.87
+            },
+            "8": {
+                "cav_accuracy": 0.725,
+                "tcav_score": 0.91
+            },
+            "9": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.88
+            },
+            "11": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 0.89
+            }
+        }
+    },
+    {
+        "run_id": 38,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.34
+            },
+            "1": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.53
+            },
+            "2": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.99
+            },
+            "3": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.87
+            },
+            "4": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.91
+            },
+            "5": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.88
+            },
+            "6": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.89
+            },
+            "7": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.92
+            },
+            "8": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.87
+            },
+            "9": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.83
+            },
+            "10": {
+                "cav_accuracy": 0.9,
+                "tcav_score": 0.95
+            },
+            "11": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.95
+            }
+        }
+    },
+    {
+        "run_id": 39,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.1
+            },
+            "1": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.06
+            },
+            "2": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.81
+            },
+            "3": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.87
+            },
+            "4": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.93
+            },
+            "5": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.9
+            },
+            "6": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.88
+            },
+            "7": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.92
+            },
+            "8": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.93
+            },
+            "10": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.87
+            },
+            "11": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.88
+            }
+        }
+    },
+    {
+        "run_id": 40,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.27
+            },
+            "1": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.12
+            },
+            "2": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.7
+            },
+            "3": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.6
+            },
+            "4": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.55
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.47
+            },
+            "6": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.45
+            },
+            "7": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.64
+            },
+            "8": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.7125,
+                "tcav_score": 0.94
+            },
+            "10": {
+                "cav_accuracy": 0.7875,
+                "tcav_score": 0.77
+            },
+            "11": {
+                "cav_accuracy": 0.7875,
+                "tcav_score": 0.9
+            }
+        }
+    },
+    {
+        "run_id": 41,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.36
+            },
+            "1": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.52
+            },
+            "2": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.97
+            },
+            "3": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.94
+            },
+            "4": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.96
+            },
+            "5": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.92
+            },
+            "6": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.94
+            },
+            "7": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.96
+            },
+            "8": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.96
+            },
+            "11": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.93
+            }
+        }
+    },
+    {
+        "run_id": 42,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.1
+            },
+            "1": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.1
+            },
+            "2": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.65
+            },
+            "3": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.6
+            },
+            "4": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.89
+            },
+            "5": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.85
+            },
+            "6": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.81
+            },
+            "7": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.84
+            },
+            "8": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.96
+            },
+            "9": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.7875,
+                "tcav_score": 0.93
+            },
+            "11": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.85
+            }
+        }
+    },
+    {
+        "run_id": 43,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.38
+            },
+            "1": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.11
+            },
+            "2": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.6
+            },
+            "3": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.67
+            },
+            "4": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.71
+            },
+            "5": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.7
+            },
+            "6": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.59
+            },
+            "7": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.69
+            },
+            "8": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.7,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.78
+            },
+            "11": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.91
+            }
+        }
+    },
+    {
+        "run_id": 44,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.08
+            },
+            "1": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.29
+            },
+            "2": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.47
+            },
+            "3": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.85
+            },
+            "4": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.62
+            },
+            "5": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.58
+            },
+            "6": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.61
+            },
+            "7": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.77
+            },
+            "8": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.93
+            },
+            "9": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.725,
+                "tcav_score": 0.96
+            },
+            "11": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.86
+            }
+        }
+    },
+    {
+        "run_id": 45,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.32
+            },
+            "1": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.04
+            },
+            "2": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.31
+            },
+            "3": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.42
+            },
+            "4": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.4
+            },
+            "5": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.39
+            },
+            "6": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.35
+            },
+            "7": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.34
+            },
+            "8": {
+                "cav_accuracy": 0.675,
+                "tcav_score": 0.88
+            },
+            "9": {
+                "cav_accuracy": 0.75,
+                "tcav_score": 0.93
+            },
+            "10": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.36
+            },
+            "11": {
+                "cav_accuracy": 0.8375,
+                "tcav_score": 0.81
+            }
+        }
+    },
+    {
+        "run_id": 46,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.31
+            },
+            "1": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.07
+            },
+            "2": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.37
+            },
+            "3": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.68
+            },
+            "4": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.85
+            },
+            "5": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.81
+            },
+            "6": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.75
+            },
+            "7": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.79
+            },
+            "8": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.98
+            },
+            "11": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.84
+            }
+        }
+    },
+    {
+        "run_id": 47,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.17
+            },
+            "1": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.3
+            },
+            "2": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.91
+            },
+            "3": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.91
+            },
+            "4": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.94
+            },
+            "5": {
+                "cav_accuracy": 0.6875,
+                "tcav_score": 0.95
+            },
+            "6": {
+                "cav_accuracy": 0.675,
+                "tcav_score": 0.93
+            },
+            "7": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.94
+            },
+            "8": {
+                "cav_accuracy": 0.675,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.96
+            },
+            "10": {
+                "cav_accuracy": 0.775,
+                "tcav_score": 0.93
+            },
+            "11": {
+                "cav_accuracy": 0.7875,
+                "tcav_score": 0.9
+            }
+        }
+    },
+    {
+        "run_id": 48,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.5,
+                "tcav_score": 0.47
+            },
+            "1": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.17
+            },
+            "2": {
+                "cav_accuracy": 0.6,
+                "tcav_score": 0.79
+            },
+            "3": {
+                "cav_accuracy": 0.5625,
+                "tcav_score": 0.85
+            },
+            "4": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.93
+            },
+            "5": {
+                "cav_accuracy": 0.575,
+                "tcav_score": 0.94
+            },
+            "6": {
+                "cav_accuracy": 0.5875,
+                "tcav_score": 0.91
+            },
+            "7": {
+                "cav_accuracy": 0.6125,
+                "tcav_score": 0.89
+            },
+            "8": {
+                "cav_accuracy": 0.6625,
+                "tcav_score": 0.95
+            },
+            "9": {
+                "cav_accuracy": 0.7375,
+                "tcav_score": 0.95
+            },
+            "10": {
+                "cav_accuracy": 0.875,
+                "tcav_score": 0.82
+            },
+            "11": {
+                "cav_accuracy": 0.85,
+                "tcav_score": 0.82
+            }
+        }
+    },
+    {
+        "run_id": 49,
+        "layers": {
+            "0": {
+                "cav_accuracy": 0.4875,
+                "tcav_score": 0.21
+            },
+            "1": {
+                "cav_accuracy": 0.5375,
+                "tcav_score": 0.4
+            },
+            "2": {
+                "cav_accuracy": 0.55,
+                "tcav_score": 0.93
+            },
+            "3": {
+                "cav_accuracy": 0.65,
+                "tcav_score": 0.88
+            },
+            "4": {
+                "cav_accuracy": 0.6375,
+                "tcav_score": 0.91
+            },
+            "5": {
+                "cav_accuracy": 0.625,
+                "tcav_score": 0.87
+            },
+            "6": {
+                "cav_accuracy": 0.525,
+                "tcav_score": 0.78
+            },
+            "7": {
+                "cav_accuracy": 0.5125,
+                "tcav_score": 0.78
+            },
+            "8": {
+                "cav_accuracy": 0.725,
+                "tcav_score": 0.91
+            },
+            "9": {
+                "cav_accuracy": 0.8,
+                "tcav_score": 0.9
+            },
+            "10": {
+                "cav_accuracy": 0.725,
+                "tcav_score": 0.94
+            },
+            "11": {
+                "cav_accuracy": 0.825,
+                "tcav_score": 1.0
+            }
+        }
+    }
+]
