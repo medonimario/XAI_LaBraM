@@ -11,6 +11,7 @@ import matplotlib.pyplot as plt
 from dotenv import load_dotenv
 from tqdm import tqdm
 from einops import rearrange # Tensor manipulation
+from sklearn.model_selection import train_test_split
 
 # Import our custom ActivationExtractor class
 from src.xai_labram.activation_extractor import ActivationExtractor
@@ -70,33 +71,92 @@ def plot_activations_and_cav(concept_activations, random_activations, classifier
     plt.close()
 
 
-# --- CAV Training Function (No changes) ---
+# # --- CAV Training Function (No changes) ---
+# def train_cav(concept_activations, random_activations, layer_id, alpha, 
+#               output_dir, concept_name, random_name, enable_plotting=False):
+#     # (This function is identical to the previous script)
+#     print(f"--- Training CAV for Layer {layer_id} ---")
+#     X = np.concatenate((concept_activations, random_activations), axis=0)
+#     y = np.concatenate((np.ones(concept_activations.shape[0]),
+#                         np.zeros(random_activations.shape[0])), axis=0)
+    
+#     classifier = SGDClassifier(loss='log_loss', penalty='l2', alpha=alpha,
+#                                max_iter=1000, tol=1e-3, random_state=42, class_weight='balanced')
+#     classifier.fit(X, y)
+#     accuracy = classifier.score(X, y)
+#     print(f"Linear classifier accuracy: {accuracy:.4f}")
+
+#     if accuracy < 0.7 and accuracy > 0.51: print(f"Warning: Low accuracy ({accuracy:.4f}). CAV might be weak.")
+#     elif accuracy <= 0.51: print(f"Warning: Accuracy near/below chance ({accuracy:.4f}). CAV likely meaningless.")
+
+#     cav_unnormalized = classifier.coef_.squeeze().copy()
+
+#     if enable_plotting:
+#         print("  Generating PCA plot for this run...")
+#         pca = PCA(n_components=2, random_state=42)
+#         pca.fit(X)
+#         print(f"  PCA explained variance: {pca.explained_variance_ratio_}")
+#         plot_activations_and_cav(concept_activations, random_activations, classifier, pca, 
+#                                  layer_id, cav_unnormalized, 'reports/figures',# output_dir,
+#                                    concept_name, random_name)
+
+#     norm = np.linalg.norm(cav_unnormalized)
+#     if norm > 1e-6:
+#         cav_normalized = cav_unnormalized / norm
+#     else:
+#         print("Warning: CAV norm near zero.")
+#         cav_normalized = cav_unnormalized
+#     return cav_normalized, accuracy
+
+# --- CAV Training Function (MODIFIED) ---
 def train_cav(concept_activations, random_activations, layer_id, alpha, 
               output_dir, concept_name, random_name, enable_plotting=False):
-    # (This function is identical to the previous script)
+    
     print(f"--- Training CAV for Layer {layer_id} ---")
     X = np.concatenate((concept_activations, random_activations), axis=0)
     y = np.concatenate((np.ones(concept_activations.shape[0]),
                         np.zeros(random_activations.shape[0])), axis=0)
     
-    classifier = SGDClassifier(loss='log_loss', penalty='l2', alpha=alpha,
-                               max_iter=1000, tol=1e-3, random_state=42, class_weight='balanced')
-    classifier.fit(X, y)
-    accuracy = classifier.score(X, y)
-    print(f"Linear classifier accuracy: {accuracy:.4f}")
+    # --- NEW: Split data into train and test sets ---
+    # The paper uses a test set 1/3 the size of the training set,
+    # which is a 75/25 train/test split (test_size=0.25).
+    # We use stratify=y to ensure both classes are represented in train/test.
+    X_train, X_test, y_train, y_test = train_test_split(
+        X, y, test_size=0.25, random_state=42, stratify=y
+    )
+    
+    # --- NEW: Train a classifier *just for accuracy* on the 75% training set ---
+    classifier_for_acc = SGDClassifier(loss='log_loss', penalty='l2', alpha=alpha,
+                                       max_iter=1000, tol=1e-3, random_state=42, class_weight='balanced')
+    classifier_for_acc.fit(X_train, y_train)
+    
+    # --- MODIFIED: Calculate accuracy on the 25% *test set* ---
+    accuracy = classifier_for_acc.score(X_test, y_test)
+    print(f"Linear classifier TEST accuracy: {accuracy:.4f} (on {len(y_test)} held-out samples)")
 
-    if accuracy < 0.7 and accuracy > 0.51: print(f"Warning: Low accuracy ({accuracy:.4f}). CAV might be weak.")
-    elif accuracy <= 0.51: print(f"Warning: Accuracy near/below chance ({accuracy:.4f}). CAV likely meaningless.")
+    # --- MODIFIED: Use TEST accuracy for warnings ---
+    if accuracy < 0.7 and accuracy > 0.51: print(f"Warning: Low TEST accuracy ({accuracy:.4f}). CAV might be weak.")
+    elif accuracy <= 0.51: print(f"Warning: TEST accuracy near/below chance ({accuracy:.4f}). CAV likely meaningless.")
 
-    cav_unnormalized = classifier.coef_.squeeze().copy()
+    # --- NEW: Train a *final* classifier on 100% of data to get the best CAV ---
+    # This uses all available data to create the most stable CAV vector,
+    # while our accuracy metric remains the more honest "test accuracy".
+    classifier_for_cav = SGDClassifier(loss='log_loss', penalty='l2', alpha=alpha,
+                                       max_iter=1000, tol=1e-3, random_state=42, class_weight='balanced')
+    classifier_for_cav.fit(X, y) # <-- Fit on the full X and y
+    
+    cav_unnormalized = classifier_for_cav.coef_.squeeze().copy()
 
     if enable_plotting:
         print("  Generating PCA plot for this run...")
         pca = PCA(n_components=2, random_state=42)
-        pca.fit(X)
+        pca.fit(X) # Fit PCA on all data
         print(f"  PCA explained variance: {pca.explained_variance_ratio_}")
-        plot_activations_and_cav(concept_activations, random_activations, classifier, pca, 
-                                 layer_id, cav_unnormalized, 'reports/figures',# output_dir,
+        
+        # --- MODIFIED: Pass the *final* classifier to the plotting function ---
+        # This ensures the decision boundary plotted matches the final CAV.
+        plot_activations_and_cav(concept_activations, random_activations, classifier_for_cav, pca, 
+                                 layer_id, cav_unnormalized, output_dir,
                                    concept_name, random_name)
 
     norm = np.linalg.norm(cav_unnormalized)
@@ -105,6 +165,8 @@ def train_cav(concept_activations, random_activations, layer_id, alpha,
     else:
         print("Warning: CAV norm near zero.")
         cav_normalized = cav_unnormalized
+        
+    # --- MODIFIED: Return the final CAV and the TEST accuracy ---
     return cav_normalized, accuracy
 
 
@@ -292,7 +354,7 @@ def main(args):
         
     os.makedirs(args.output_dir, exist_ok=True)
     # NEW: Specific directory for pre-computed gradients
-    target_grad_dir = os.path.join(args.output_dir, "target_gradients")
+    target_grad_dir = os.path.join(args.target_gradient_dir, "target_gradients")
 
     device_str = 'cuda' if torch.cuda.is_available() else 'cpu'
     print("Loading model...")
@@ -336,7 +398,7 @@ def main(args):
     print("\nLoading Concept activations...")
     concept_activations_by_layer = {}
     for layer_id in target_layers:
-        concept_act_path = os.path.join(args.activation_dir, f"{args.concept_name}_layer_{layer_id}.pkl")
+        concept_act_path = os.path.join(args.concept_activation_dir, f"{args.concept_name}_layer_{layer_id}.pkl")
         try:
             with open(concept_act_path, 'rb') as f: 
                 concept_activations_by_layer[layer_id] = pickle.load(f)
@@ -373,8 +435,8 @@ def main(args):
                 
             concept_acts = concept_activations_by_layer[layer_id]
             target_grads = target_gradients_by_layer[layer_id]
-            
-            random_act_path = os.path.join(args.activation_dir, f"{random_name}_layer_{layer_id}.pkl")
+
+            random_act_path = os.path.join(args.random_activation_dir, f"{random_name}_layer_{layer_id}.pkl")
             try:
                 with open(random_act_path, 'rb') as f: random_acts = pickle.load(f)
             except FileNotFoundError as e:
@@ -450,10 +512,14 @@ if __name__ == '__main__':
     # --- Paths ---
     parser.add_argument("--checkpoint_path", type=str, required=True,
                         help="Path to the .pth finetuned model checkpoint.")
-    parser.add_argument("--activation_dir", type=str, required=True,
-                        help="Directory containing all .pkl activation files (concept, target, and random_run_i).")
+    parser.add_argument("--random_activation_dir", type=str, required=True,
+                        help="Directory containing all .pkl activation files for random_run_i.")
+    parser.add_argument("--concept_activation_dir", type=str, required=True,
+                        help="Directory containing all .pkl activation files for concept.")
     parser.add_argument("--manifest_dir", type=str, required=True,
                         help="Directory containing the JSON manifest files (e.g., target_class_set.json).")
+    parser.add_argument("--target_gradient_dir", type=str, required=True,
+                        help="Directory to save or load pre-calculated target gradients.")
     parser.add_argument("--output_dir", type=str, required=True,
                         help="Directory to save results (plots for run 0 and the final stats JSON).")
 

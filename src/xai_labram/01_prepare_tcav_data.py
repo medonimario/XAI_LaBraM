@@ -35,7 +35,7 @@ def load_labeled_files(directories, required_label):
         
         logging.info(f"Scanning {directory} for label '{required_label}'...")
         for filename in os.listdir(directory):
-            if filename.endswith(".pkl"):
+            if filename.endswith(".pkl") and not filename.startswith("._"):
                 filepath = os.path.join(directory, filename)
                 try:
                     with open(filepath, "rb") as f:
@@ -62,7 +62,7 @@ def load_unlabeled_files(directories):
 
         logging.info(f"Scanning {directory} for all .pkl files...")
         for filename in os.listdir(directory):
-            if filename.endswith(".pkl"):
+            if filename.endswith(".pkl") and not filename.startswith("._"):
                 file_paths.append(os.path.join(directory, filename))
     
     logging.info(f"Found {len(file_paths)} total files.")
@@ -82,10 +82,16 @@ def main(args):
     concept_source_pool = []
     random_source_pool = []
     target_class_set = []
+    concept_set = []
+    random_sets = []
 
     # 2. Load Data Pools based on Mode (Sanity Check vs. Standard)
     if args.sanity_check:
         # --- SANITY CHECK MODE ---
+        # --- MODIFIED ---: Log a warning if skip flags are used here
+        if args.skip_target_set or args.skip_random_sets:
+            logging.warning("Ignoring --skip_target_set/--skip_random_sets in --sanity_check mode.")
+
         # In this mode, we split the target_dir test set.
         # Half of target_label files -> Concept Pool
         # Other half of target_label files -> Target Set
@@ -119,19 +125,20 @@ def main(args):
 
     else:
         # --- STANDARD MODE ---
-        # In this mode, datasets are treated as independent.
-        # Target set comes from target_dir.
-        # Concept set comes from concept_dirs.
-        # Random/Negative set comes from random_dirs.
         logging.info("--- Running in STANDARD Mode ---")
 
         # 1. Load Target Class Set (X_k)
-        logging.info("Loading Target Class set (X_k)...")
-        target_class_set = load_labeled_files([args.target_dir], args.target_label)
-        if not target_class_set:
-            logging.warning(f"No target class files found for label {args.target_label} in {args.target_dir}")
+        # --- MODIFIED ---: Added conditional block
+        if not args.skip_target_set:
+            logging.info("Loading Target Class set (X_k)...")
+            target_class_set = load_labeled_files([args.target_dir], args.target_label)
+            if not target_class_set:
+                logging.warning(f"No target class files found for label {args.target_label} in {args.target_dir}")
+        else:
+            logging.info("Skipping Target Class set loading (as per --skip_target_set).")
 
         # 2. Load Concept Source Pool (P_C)
+        # (We assume the user always wants to generate the concept set, as per the request)
         logging.info("Loading Concept source pool (P_C)...")
         if args.concept_label is not None:
             logging.info(f"Using Labeled Concept mode (label={args.concept_label}).")
@@ -145,48 +152,70 @@ def main(args):
             raise ValueError("Concept source pool is empty.")
 
         # 3. Load Random/Negative Source Pool (N)
-        logging.info("Loading Random/Negative source pool (N)...")
-        if args.negative_label is not None:
-            logging.info(f"Using 'Negative' mode (label={args.negative_label}).")
-            random_source_pool = load_labeled_files(args.random_dirs, args.negative_label)
+        # --- MODIFIED ---: Added conditional block
+        if not args.skip_random_sets:
+            logging.info("Loading Random/Negative source pool (N)...")
+            if args.negative_label is not None:
+                logging.info(f"Using 'Negative' mode (label={args.negative_label}).")
+                random_source_pool = load_labeled_files(args.random_dirs, args.negative_label)
+            else:
+                logging.info("Using 'Random' mode (all files in dir).")
+                random_source_pool = load_unlabeled_files(args.random_dirs)
+                
+            if not random_source_pool:
+                logging.error(f"No random/negative files found in {args.random_dirs} (Label: {args.negative_label}).")
+                raise ValueError("Random/Negative source pool is empty.")
         else:
-            logging.info("Using 'Random' mode (all files in dir).")
-            random_source_pool = load_unlabeled_files(args.random_dirs)
-            
-        if not random_source_pool:
-            logging.error(f"No random/negative files found in {args.random_dirs} (Label: {args.negative_label}).")
-            raise ValueError("Random/Negative source pool is empty.")
+            logging.info("Skipping Random/Negative source pool loading (as per --skip_random_sets).")
+
 
     # 3. Create Final Datasets
     
     # --- Create Concept Set (P_C) ---
-    num_concept = min(len(concept_source_pool), args.num_examples_per_run)
-    if num_concept < args.num_examples_per_run:
-        logging.warning(f"Only found {num_concept} concept examples, requested {args.num_examples_per_run}.")
-    
-    concept_set = random.sample(concept_source_pool, num_concept)
-    logging.info(f"Created Concept set with {len(concept_set)} files.")
+    # (Always runs, as this is the primary purpose of a re-run)
+    if concept_source_pool:
+        num_concept = min(len(concept_source_pool), args.num_examples_per_run)
+        if num_concept < args.num_examples_per_run:
+            logging.warning(f"Only found {num_concept} concept examples, requested {args.num_examples_per_run}.")
+        
+        concept_set = random.sample(concept_source_pool, num_concept)
+        logging.info(f"Created Concept set with {len(concept_set)} files.")
+    else:
+        logging.info("Concept source pool is empty. No concept set created.")
     
     # --- Create Random/Negative Sets (N_runs) ---
-    random_sets = []
-    num_random_per_run = min(len(random_source_pool), args.num_examples_per_run)
-    if num_random_per_run < args.num_examples_per_run:
-        logging.warning(f"Only {num_random_per_run} random/negative examples available per run, requested {args.num_examples_per_run}.")
-    
-    # Check if we have enough *unique* samples for all runs without replacement
-    if len(random_source_pool) < args.num_examples_per_run * args.num_runs:
-        logging.warning(f"Total random pool ({len(random_source_pool)}) is smaller than "
-                        f"total samples needed ({args.num_examples_per_run * args.num_runs}). "
-                        "Sets will be sampled *with* replacement (i.e., files may be reused across sets).")
-    
-    logging.info(f"Creating {args.num_runs} random/negative sets of size {num_random_per_run}...")
-    for _ in range(args.num_runs):
-        random_sets.append(random.sample(random_source_pool, num_random_per_run))
-    
-    logging.info(f"Created {len(random_sets)} random/negative sets.")
+    # --- MODIFIED ---: Run if (NOT skipping) OR (in sanity_check mode)
+    if not args.skip_random_sets or args.sanity_check:
+        if not random_source_pool and not args.sanity_check:
+            # This handles the case where we're in standard mode and skipped loading
+            logging.info("Random source pool is empty (likely skipped). No random sets will be created.")
+        elif random_source_pool:
+            num_random_per_run = min(len(random_source_pool), args.num_examples_per_run)
+            if num_random_per_run < args.num_examples_per_run:
+                logging.warning(f"Only {num_random_per_run} random/negative examples available per run, requested {args.num_examples_per_run}.")
+            
+            # Check if we have enough *unique* samples for all runs without replacement
+            if len(random_source_pool) < args.num_examples_per_run * args.num_runs:
+                logging.warning(f"Total random pool ({len(random_source_pool)}) is smaller than "
+                                f"total samples needed ({args.num_examples_per_run * args.num_runs}). "
+                                "Sets will be sampled *with* replacement (i.e., files may be reused across sets).")
+            
+            logging.info(f"Creating {args.num_runs} random/negative sets of size {num_random_per_run}...")
+            for _ in range(args.num_runs):
+                random_sets.append(random.sample(random_source_pool, num_random_per_run))
+            
+            logging.info(f"Created {len(random_sets)} random/negative sets.")
+    else:
+        logging.info("Skipping Random/Negative set creation (as per --skip_random_sets).")
+
     
     # Target Class set (X_k) is already prepared as target_class_set
-    logging.info(f"Using {len(target_class_set)} files for the Target Class set.")
+    # --- MODIFIED ---: Only log if it was supposed to run
+    if not args.skip_target_set or args.sanity_check:
+        logging.info(f"Using {len(target_class_set)} files for the Target Class set.")
+    else:
+        logging.info("Target Class set was skipped.")
+
 
     # 4. Save Manifests
     logging.info("Saving manifest files...")
@@ -200,6 +229,7 @@ def main(args):
     }
     
     # Create summary dictionary
+    # (This will correctly report 0 for skipped/empty sets)
     summary = {
         "info": "TCAV Data Manifests",
         "config": vars(args),
@@ -217,14 +247,19 @@ def main(args):
     
     # Write files
     try:
+        # Always write concept_set.json (this is the main purpose of the re-run)
         with open(paths["concept_set"], 'w') as f:
             json.dump(concept_set, f, indent=4)
-            
-        with open(paths["random_sets"], 'w') as f:
-            json.dump(random_sets, f, indent=4)
-            
-        with open(paths["target_class_set"], 'w') as f:
-            json.dump(target_class_set, f, indent=4)
+        
+        # --- MODIFIED ---: Conditionally write
+        if not args.skip_random_sets or args.sanity_check:
+            with open(paths["random_sets"], 'w') as f:
+                json.dump(random_sets, f, indent=4)
+        
+        # --- MODIFIED ---: Conditionally write
+        if not args.skip_target_set or args.sanity_check:
+            with open(paths["target_class_set"], 'w') as f:
+                json.dump(target_class_set, f, indent=4)
             
         with open(paths["summary"], 'w') as f:
             json.dump(summary, f, indent=4)
@@ -235,8 +270,17 @@ def main(args):
         
     logging.info("--- Data preparation complete. ---")
     logging.info(f"Concept set: {paths['concept_set']}")
-    logging.info(f"Random sets: {paths['random_sets']}")
-    logging.info(f"Target set: {paths['target_class_set']}")
+    # --- MODIFIED ---: Conditional logging
+    if not args.skip_random_sets or args.sanity_check:
+        logging.info(f"Random sets: {paths['random_sets']}")
+    else:
+        logging.info("Random sets: (Skipped)")
+        
+    if not args.skip_target_set or args.sanity_check:
+        logging.info(f"Target set: {paths['target_class_set']}")
+    else:
+        logging.info("Target set: (Skipped)")
+        
     logging.info(f"Summary: {paths['summary']}")
 
 if __name__ == "__main__":
@@ -276,11 +320,20 @@ if __name__ == "__main__":
                         help="Enable sanity check mode. In this mode, --target_dir is split to create all datasets. "
                              "--concept_dirs and --random_dirs are ignored. --negative_label *is* required.")
     
+    # --- NEW ---: Optional skip flags
+    parser.add_argument("--skip_target_set", action='store_true',
+                        help="Do not load or generate the target_class_set.json. (Ignored in sanity_check mode).")
+    parser.add_argument("--skip_random_sets", action='store_true',
+                        help="Do not load or generate the random_sets.json. (Ignored in sanity_check mode).")
+    
     args = parser.parse_args()
     
-    # --- Argument Validation ---
-    if not args.sanity_check and (not args.concept_dirs or not args.random_dirs):
-        parser.error("In Standard Mode (default), --concept_dirs and --random_dirs are required.")
+    # --- MODIFIED ---: Argument Validation
+    if not args.sanity_check:
+        if not args.concept_dirs:
+            parser.error("In Standard Mode, --concept_dirs is required.")
+        if not args.random_dirs and not args.skip_random_sets:
+            parser.error("In Standard Mode, --random_dirs is required unless --skip_random_sets is used.")
     
     if args.sanity_check and (args.concept_dirs or args.random_dirs):
         print("Warning: --concept_dirs and --random_dirs are ignored in --sanity_check mode.")

@@ -88,21 +88,47 @@ def main(args):
     
     # --- Load Manifests ---
     print(f"Loading manifests from: {manifest_dir}")
+    
+    # --- MODIFIED: Initialize all file lists as empty ---
+    concept_files = []
+    target_files = []
+    random_sets_all_runs = []
+
     try:
+        # 1. Concept (Always required)
         with open(os.path.join(manifest_dir, 'concept_set.json'), 'r') as f:
             concept_files = json.load(f)
-        with open(os.path.join(manifest_dir, 'target_class_set.json'), 'r') as f:
-            target_files = json.load(f)
-        with open(os.path.join(manifest_dir, 'random_sets.json'), 'r') as f:
-            random_sets_all_runs = json.load(f) # This is a list of lists
+        print(f"Found {len(concept_files)} concept files.")
     except FileNotFoundError as e:
-        print(f"Error: Manifest file not found. Did you run the preparation script?")
+        print(f"Error: Required manifest 'concept_set.json' not found.")
         print(f"{e}")
         return
-        
-    print(f"Found {len(concept_files)} concept files.")
-    print(f"Found {len(target_files)} target files.")
-    print(f"Found {len(random_sets_all_runs)} runs of random sets.")
+
+    # --- MODIFIED: Conditionally load target ---
+    if not args.skip_target_set:
+        try:
+            with open(os.path.join(manifest_dir, 'target_class_set.json'), 'r') as f:
+                target_files = json.load(f)
+            print(f"Found {len(target_files)} target files.")
+        except FileNotFoundError as e:
+            print(f"Error: 'target_class_set.json' not found. (Use --skip_target_set to ignore).")
+            print(f"{e}")
+            return
+    else:
+        print("Skipping target_class_set.json loading.")
+
+    # --- MODIFIED: Conditionally load random ---
+    if not args.skip_random_sets:
+        try:
+            with open(os.path.join(manifest_dir, 'random_sets.json'), 'r') as f:
+                random_sets_all_runs = json.load(f) # This is a list of lists
+            print(f"Found {len(random_sets_all_runs)} runs of random sets.")
+        except FileNotFoundError as e:
+            print(f"Error: 'random_sets.json' not found. (Use --skip_random_sets to ignore).")
+            print(f"{e}")
+            return
+    else:
+        print("Skipping random_sets.json loading.")
 
     # --- Initialize Extractor ---
     device_str = 'cuda' if torch.cuda.is_available() else 'cpu'
@@ -119,20 +145,37 @@ def main(args):
     # --- Process all datasets ---
     
     # 1. Process the (single) Concept Set
-    process_and_save_activations(extractor, concept_files, "concept_set", output_dir)
+    # (Always runs)
+    if not concept_files:
+        print("\nWarning: Concept file list is empty. Nothing to process for 'concept_set'.")
+    else:
+        process_and_save_activations(extractor, concept_files, "concept_set", output_dir)
     
     # 2. Process the (single) Target Class Set
-    process_and_save_activations(extractor, target_files, "target_class_set", output_dir)
+    # --- MODIFIED ---: Conditional processing
+    if not args.skip_target_set:
+        if not target_files:
+            print("\nWarning: Target file list is empty. Nothing to process for 'target_class_set'.")
+        else:
+            process_and_save_activations(extractor, target_files, "target_class_set", output_dir)
+    else:
+        print("\nSkipping activation generation for Target Class set.")
 
     # 3. Process the (multiple) Random Sets
-    # This is the new, crucial part
-    print(f"\n--- Processing {len(random_sets_all_runs)} Random Runs ---")
-    for i, random_file_list in enumerate(random_sets_all_runs):
-        dataset_name = f"random_run_{i}"
-        process_and_save_activations(extractor, random_file_list, dataset_name, output_dir)
+    # --- MODIFIED ---: Conditional processing
+    if not args.skip_random_sets:
+        if not random_sets_all_runs:
+                print("\nWarning: Random sets list is empty. Nothing to process for 'random_sets'.")
+        else:
+            print(f"\n--- Processing {len(random_sets_all_runs)} Random Runs ---")
+            for i, random_file_list in enumerate(random_sets_all_runs):
+                dataset_name = f"random_run_{i}"
+                process_and_save_activations(extractor, random_file_list, dataset_name, output_dir)
+    else:
+        print("\nSkipping activation generation for Random sets.")
     
     print("\nActivation generation complete.")
-    print(f"All activation files saved in: {output_dir}")
+    print(f"All generated activation files saved in: {output_dir}")
     print("Ready for Part C: Training the CAVs and running TCAV.")
 
 if __name__ == '__main__':
@@ -144,18 +187,13 @@ if __name__ == '__main__':
                         help="Directory containing the JSON manifest files (concept_set.json, etc.)")
     parser.add_argument("--output_dir", type=str, required=True,
                         help="Directory to save the output .pkl activation files.")
-    # You could add --target_layers here if you want to make it configurable
+    
+    # --- NEW ---: Optional skip flags
+    parser.add_argument("--skip_target_set", action='store_true',
+                        help="Do not load or process activations for the target_class_set.json.")
+    parser.add_argument("--skip_random_sets", action='store_true',
+                        help="Do not load or process activations for the random_sets.json.")
     
     args = parser.parse_args()
     
-    # Update TARGET_LAYERS from args if you implement it
-    # global TARGET_LAYERS
-    # TARGET_LAYERS = [int(l) for l in args.target_layers.split(',')]
-    
     main(args)
-
-# Example command to run this script:
-# python -m src.xai_labram.02_generate_activations \
-#     --checkpoint_path models/checkpoints/finetune_circling_v5/checkpoint-best.pth \
-#     --manifest_dir /work3/s204684/Thesis/circling_eeg/tcav/sanity_check_open \
-#     --output_dir /work3/s204684/Thesis/circling_eeg/tcav/sanity_check_open/activations
