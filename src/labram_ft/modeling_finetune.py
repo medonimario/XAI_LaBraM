@@ -433,20 +433,29 @@ class NeuralTransformer(nn.Module):
             for l, blk in enumerate(self.blocks):
                 x = blk(x, rel_pos_bias=rel_pos_bias)
                 if l in layer_id:
-                    output_list.append(x) # Return the raw block output [B, 257, D]
+                    output_list.append(x) 
             
             if norm_output:
                  final_outputs = []
                  for output in output_list:
-                     normed_output = self.norm(output) # This is nn.Identity()
-                     normed_output_patches = normed_output[:, 1:] # Get patch tokens [B, 256, D]
-                     # Average patches FIRST, then apply norm, just like in forward_features
-                     normed_and_averaged = self.fc_norm(normed_output_patches.mean(1)) # [B, D]
+                     normed_output = self.norm(output) 
+                     normed_output_patches = normed_output[:, 1:] # [B, 256, D]
+                     
+                     # --- OLD CODE (Averaging) ---
+                     normed_and_averaged = self.fc_norm(normed_output_patches.mean(1)) 
                      final_outputs.append(normed_and_averaged)
+
+                     # --- NEW CODE (Flattening) ---
+                     # 1. Apply fc_norm to every patch individually (keeps shape [B, 256, 200])
+                    #  normed_patches = self.fc_norm(normed_output_patches)
+                    #  # 2. Flatten patches and dimensions (B, 256*200) -> (B, 51200)
+                    #  flattened = normed_patches.flatten(1)
+                    #  final_outputs.append(flattened)
+                     
                  return final_outputs
             else:
-                 # Return patch tokens, averaged
-                 return [out[:, 1:].mean(1) for out in output_list]
+                 # --- NEW CODE (Flattening for non-normed path too) ---
+                 return [out[:, 1:].flatten(1) for out in output_list]
 
         elif isinstance(layer_id, int):
             # This logic is for getting input to a specific layer, which is fine
@@ -458,7 +467,8 @@ class NeuralTransformer(nn.Module):
                 else:
                     break
             # Return patch tokens, averaged
-            return x[:, 1:].mean(1)
+            # Was: return x[:, 1:].mean(1)
+            return x[:, 1:].flatten(1)
         else:
             raise NotImplementedError(f"Not support for layer id is {layer_id} now!")
 

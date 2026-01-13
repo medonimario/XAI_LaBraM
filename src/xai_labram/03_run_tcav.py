@@ -70,44 +70,6 @@ def plot_activations_and_cav(concept_activations, random_activations, classifier
     print(f"  Saved PCA plot for Run 0 to {plot_path}")
     plt.close()
 
-
-# # --- CAV Training Function (No changes) ---
-# def train_cav(concept_activations, random_activations, layer_id, alpha, 
-#               output_dir, concept_name, random_name, enable_plotting=False):
-#     # (This function is identical to the previous script)
-#     print(f"--- Training CAV for Layer {layer_id} ---")
-#     X = np.concatenate((concept_activations, random_activations), axis=0)
-#     y = np.concatenate((np.ones(concept_activations.shape[0]),
-#                         np.zeros(random_activations.shape[0])), axis=0)
-    
-#     classifier = SGDClassifier(loss='log_loss', penalty='l2', alpha=alpha,
-#                                max_iter=1000, tol=1e-3, random_state=42, class_weight='balanced')
-#     classifier.fit(X, y)
-#     accuracy = classifier.score(X, y)
-#     print(f"Linear classifier accuracy: {accuracy:.4f}")
-
-#     if accuracy < 0.7 and accuracy > 0.51: print(f"Warning: Low accuracy ({accuracy:.4f}). CAV might be weak.")
-#     elif accuracy <= 0.51: print(f"Warning: Accuracy near/below chance ({accuracy:.4f}). CAV likely meaningless.")
-
-#     cav_unnormalized = classifier.coef_.squeeze().copy()
-
-#     if enable_plotting:
-#         print("  Generating PCA plot for this run...")
-#         pca = PCA(n_components=2, random_state=42)
-#         pca.fit(X)
-#         print(f"  PCA explained variance: {pca.explained_variance_ratio_}")
-#         plot_activations_and_cav(concept_activations, random_activations, classifier, pca, 
-#                                  layer_id, cav_unnormalized, 'reports/figures',# output_dir,
-#                                    concept_name, random_name)
-
-#     norm = np.linalg.norm(cav_unnormalized)
-#     if norm > 1e-6:
-#         cav_normalized = cav_unnormalized / norm
-#     else:
-#         print("Warning: CAV norm near zero.")
-#         cav_normalized = cav_unnormalized
-#     return cav_normalized, accuracy
-
 # --- CAV Training Function (MODIFIED) ---
 def train_cav(concept_activations, random_activations, layer_id, alpha, 
               output_dir, concept_name, random_name, enable_plotting=False):
@@ -366,7 +328,7 @@ def main(args):
         return
 
     # --- Load Raw Target EEG Data (needed for gradient calculation) ---
-    target_manifest_path = os.path.join(args.manifest_dir, f'target_class_set.json')
+    target_manifest_path = os.path.join(args.target_gradient_dir, f'target_class_set.json')
     target_eeg_tensors_raw_all = []
     try:
         with open(target_manifest_path, 'r') as f: target_files = json.load(f)

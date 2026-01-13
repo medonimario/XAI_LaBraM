@@ -7,9 +7,9 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # Assuming all provided scripts are in the same directory
-from run_class_finetuning import get_dataset, get_models
-from engine_for_finetuning import evaluate
-import utils
+from src.labram_ft.run_class_finetuning import get_dataset, get_models
+from src.labram_ft.engine_for_finetuning import evaluate
+from src.labram_ft import utils
 
 def calculate_ci(metric_value, n_samples):
     """Calculates the 95% confidence interval for a proportion."""
@@ -220,9 +220,9 @@ def main():
     else:
         print(f"log.txt not found in {args.output_dir}, skipping plotting.")
 
-    if model_args_loaded:
-        print("\nEvaluating best model on the test set...")
-        evaluate_best_model(checkpoint_path, model_args, args.device)
+    # if model_args_loaded:
+        # print("\nEvaluating best model on the test set...")
+        # evaluate_best_model(checkpoint_path, model_args, args.device)
 
 
 if __name__ == '__main__':

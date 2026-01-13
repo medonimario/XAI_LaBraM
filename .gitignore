@@ -1,9 +1,13 @@
+# old code rafactored somewhere else
+src/xai_labram/
+src/xai_labram_m/
+
 
 models/
 docs/site/
 ._*
 .env
-
+*.sh
 # test cache
 manual_test/
 
